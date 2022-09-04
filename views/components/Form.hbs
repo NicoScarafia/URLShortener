@@ -1,0 +1,12 @@
+{{#if url}}
+    <form action="/editar/{{url._id}}" method="post" class="w-50 mx-auto">
+        <input value="{{url.fullURL}}" type="text" name="fullURL" placeholder="Ingresá la URL" class="form-control my-2">
+        <button type="submit" class="btn btn-warning form-control">Editar URL</button>
+    </form>
+
+    {{else}}
+    <form action="/" method="post" class="w-25 mx-auto">
+        <input type="text" name="fullURL" placeholder="Ingresá la URL" class="form-control my-2">
+        <button type="submit" class="btn btn-primary form-control">Acortar URL</button>
+    </form>
+{{/if}}

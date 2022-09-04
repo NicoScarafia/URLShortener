@@ -2,16 +2,12 @@
 
 <main>
 
-    {{#each urls }}
-        <div class="card mb-3">
-            <div class="card-body">
-                <p>{{this.fullURL}}</p>
-                <p>{{{this.shortenURL}}}</p>
-                <button class="btn btn-primary">Copiar</button>
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger">Eliminar</button>
-            </div>
-        </div>
-    {{/each}}
+    {{> Form }}
+
+    <section class="w-75 mx-auto mt-5">
+        {{#each urls }}
+            {{> Card item=this}}
+        {{/each}}
+    </section>
 
 </main>

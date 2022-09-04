@@ -1,0 +1,19 @@
+<article class="card mb-3">
+
+    <div class="card-body">
+
+        <span>URL completa: <a href="{{item.fullURL}}" target="_blank">{{item.fullURL}}</a></span> 
+        
+        <br/>
+
+        <span>URL acortada: <a href="http://localhost:4000/{{item.shortURL}}" target="_blank">http://localhost:4000/{{item.shortURL}}</a></span>
+
+        <div class="buttons-container mt-3">
+            <button data-short="{{item.shortURL}}" class="btn btn-sm btn-primary">Copiar</button>
+            <a href="/editar/{{item._id}}" class="btn btn-sm mx-2 btn-warning">Editar</a>
+            <a href="/eliminar/{{item._id}}" class="btn btn-sm btn-danger">Eliminar</a>
+        </div>
+
+    </div>
+
+</article>
